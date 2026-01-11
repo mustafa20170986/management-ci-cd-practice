@@ -8,7 +8,7 @@ describe("testing mini",()=>{
         .get("/sbrn-get")
 
         expect(req.status).toBe(200)
-        expect(req.body.message).toBe("message from backend hihi haha serious")
+        expect(req.body.message).toBe("message from backend hihi haha serious not")
     })
 })
 
