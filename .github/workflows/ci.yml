@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches: [boss]
+  pull_request:
+    branches: [boss]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: install dependency
+        run: npm install
+
+      - name: run test
+        # Using your exact command here
+        run: node --experimental-vm-modules node_modules/jest/bin/jest.js em.test.js
