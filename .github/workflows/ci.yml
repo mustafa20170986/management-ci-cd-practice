@@ -23,4 +23,4 @@ jobs:
 
       - name: run test
         # Using your exact command here
-        run: node --experimental-vm-modules node_modules/jest/bin/jest.js em.test.js
+        run: npx --experimental-vm-modules node_modules/jest/bin/jest.js em.test.js
