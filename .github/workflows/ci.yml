@@ -22,5 +22,7 @@ jobs:
         run: npm install
 
       - name: run test
-        # Using your exact command here
-        run: npx --experimental-vm-modules node_modules/jest/bin/jest.js em.test.js
+        # Fix: Call 'jest' directly and pass the flag via NODE_OPTIONS
+        run: npx jest em.test.js
+        env:
+          NODE_OPTIONS: "--experimental-vm-modules"
