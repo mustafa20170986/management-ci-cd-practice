@@ -9,6 +9,14 @@ describe("testing mini",()=>{
 
         expect(req.status).toBe(200)
         expect(req.body.message).toBe("message from backend hihi haha serious not :)")
+    }),
+
+    test("testing love - sbrn",async()=>{
+        const req=await request(sbrn)
+        .get("/love-sbrn")
+
+        expect(req.status).toBe(200)
+        expect(req.body.message).toBe("i love you so much sbrn 3>")
     })
 })
 

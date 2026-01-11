@@ -11,4 +11,10 @@ sbrn.get("/sbrn-get",async(req,res)=>{
     })
 })
 
+sbrn.get("/love-sbrn",async(req,res)=>{
+    res.json({
+        message:"i love you so much sbrn 3>"
+    })
+})
+
 
